@@ -16,3 +16,15 @@ body.light .hero-visual{background:radial-gradient(ellipse at 50% 47%,rgba(65,11
 .risk-rings b{font-family:"DM Mono",monospace;font-size:9px;line-height:1.5;text-align:center;letter-spacing:.08em;color:var(--accent);z-index:1}
 .risk-label{position:absolute;font-family:"DM Mono",monospace;font-size:7px;letter-spacing:.1em;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:5px 7px;background:var(--card)}
 .risk-one{top:25px;left:19%}.risk-two{top:38px;right:15%}.risk-three{bottom:31px;right:22%}
+
+/* EDUCATION SECTION */
+.education-section{border-top:1px solid var(--line)}
+.education-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.education-card{display:flex;flex-direction:column;min-height:205px;padding:22px 20px 20px;border:1px solid var(--line);border-radius:12px;background:var(--card);transition:transform .22s,border-color .22s,box-shadow .22s}
+.education-card:hover{transform:translateY(-3px);border-color:rgba(128,226,207,.42);box-shadow:var(--shadow)}
+.edu-status{font-family:"DM Mono",monospace;font-size:8px;letter-spacing:.1em;color:var(--accent)}
+.education-card h3{font-size:15px;line-height:1.5;letter-spacing:-.035em;margin:14px 0 8px}
+.education-card .edu-program{font-size:10px;line-height:1.8;color:var(--muted);margin:0}
+.education-card .edu-date{font-size:9px;line-height:1.8;color:var(--soft);margin-top:auto;padding-top:17px}
+@media(max-width:900px){.education-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.education-grid{grid-template-columns:1fr}.education-card{min-height:0}}
