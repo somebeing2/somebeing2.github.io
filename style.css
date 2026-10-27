@@ -203,3 +203,12 @@ body.light .case-constraint{color:#46536a}
 .recognition-links-inline{padding-top:0;justify-content:flex-end;align-items:center;gap:12px 22px}
 .recognition-links-inline a{max-width:100%;line-height:1.7}
 @media(max-width:680px){.recognition-closing{grid-column:auto}.recognition-closing-content{grid-template-columns:1fr;gap:12px}.recognition-links-inline{flex-direction:column;align-items:flex-start}}
+/* Competition record hierarchy and responsive overall-record callout */
+.competition-heading-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px;margin-bottom:12px}
+.competition-heading-row h3{margin:0}
+.overall-record{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 10px;margin:0!important;padding:8px 11px;border:1px solid var(--line);border-radius:7px;background:var(--surface2);color:var(--muted);font-size:11px!important;line-height:1.55!important}
+.overall-record strong{color:var(--accent);white-space:nowrap}
+.overall-record span{color:var(--text)}
+.recognition-competition-content{min-width:0}
+.recognition-results li{break-inside:avoid}
+@media(max-width:680px){.competition-heading-row{align-items:flex-start;flex-direction:column}.overall-record{width:100%}}
