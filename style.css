@@ -235,3 +235,8 @@ body.light .case-constraint{color:#46536a}
 .additional-recognition p { font-size: 12px; line-height: 1.85; color: var(--muted); margin: 0; }
 @media (max-width: 900px) { .secondary-experience-grid, .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 680px) { .secondary-experience-grid, .learning-grid { grid-template-columns: 1fr; } .secondary-heading { align-items: flex-start; } .secondary-experience-card, .learning-card { padding: 17px; } }
+/* Experience timeline group headings */
+.timeline-group-label{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 0 8px;border-bottom:1px solid var(--line)}
+.timeline-group-label h3{margin:0;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.timeline-group-label .status-pill{flex-shrink:0}
+@media(max-width:680px){.timeline-group-label{padding:20px 0 8px}}
