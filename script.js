@@ -9,7 +9,7 @@
 
   const setThemeLabel = () => {
     const lightActive = body.classList.contains('light');
-    themeToggle.textContent = lightActive ? 'Switch to dark' : 'Switch to light';
+    themeToggle.textContent = lightActive ? 'Dark' : 'Light';
     themeToggle.setAttribute('aria-label', lightActive ? 'Switch to dark theme' : 'Switch to light theme');
     themeToggle.setAttribute('aria-pressed', String(lightActive));
   };
