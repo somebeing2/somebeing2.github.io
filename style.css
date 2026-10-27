@@ -212,3 +212,26 @@ body.light .case-constraint{color:#46536a}
 .recognition-competition-content{min-width:0}
 .recognition-results li{break-inside:avoid}
 @media(max-width:680px){.competition-heading-row{align-items:flex-start;flex-direction:column}.overall-record{width:100%}}
+
+/* Additional experience, professional learning, and interests */
+.additional-experience { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--line); }
+.secondary-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+.secondary-heading h3 { font-size: 19px; line-height: 1.4; letter-spacing: -.035em; margin: 7px 0 0; color: var(--text); }
+.secondary-experience-grid, .learning-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.secondary-experience-card, .learning-card { min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--card); padding: 18px; }
+.entry-kicker { display: block; font-family: "DM Mono", monospace; font-size: 8px; line-height: 1.7; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); }
+.secondary-experience-card h4, .learning-card h4 { font-size: 13px; line-height: 1.55; letter-spacing: -.02em; margin: 11px 0 6px; color: var(--text); }
+.secondary-experience-card p, .learning-card p { font-size: 11px; line-height: 1.85; color: var(--muted); margin: 7px 0 0; }
+.secondary-experience-card .entry-subtitle, .learning-card .entry-subtitle { color: var(--text); font-weight: 700; }
+.secondary-experience-card a { display: inline-block; margin-top: 12px; color: var(--accent); font-size: 10px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.secondary-experience-card a:focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; }
+.learning-subsection { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.learning-grid { margin-top: 16px; }
+.learning-card .edu-status { align-self: flex-start; }
+.interests-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+.interests-line p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.additional-recognition { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; margin-top: 22px; padding: 20px 0; border-top: 1px solid var(--line); }
+.additional-recognition h3 { font-size: 14px; line-height: 1.5; margin: 0 0 7px; color: var(--text); }
+.additional-recognition p { font-size: 12px; line-height: 1.85; color: var(--muted); margin: 0; }
+@media (max-width: 900px) { .secondary-experience-grid, .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px) { .secondary-experience-grid, .learning-grid { grid-template-columns: 1fr; } .secondary-heading { align-items: flex-start; } .secondary-experience-card, .learning-card { padding: 17px; } }
