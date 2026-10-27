@@ -196,3 +196,10 @@ body.light .case-constraint{color:#46536a}
   .recognition-results{grid-template-columns:1fr}
   .recognition-links{flex-direction:column;align-items:flex-start}
 }
+/* Recognition layout refinement */
+.recognition-closing{grid-column:1 / -1}
+.recognition-closing-content{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px 32px;align-items:center}
+.recognition-closing-copy{min-width:0}
+.recognition-links-inline{padding-top:0;justify-content:flex-end;align-items:center;gap:12px 22px}
+.recognition-links-inline a{max-width:100%;line-height:1.7}
+@media(max-width:680px){.recognition-closing{grid-column:auto}.recognition-closing-content{grid-template-columns:1fr;gap:12px}.recognition-links-inline{flex-direction:column;align-items:flex-start}}
