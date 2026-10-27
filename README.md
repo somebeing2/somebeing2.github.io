@@ -1,28 +1,29 @@
-# Kevin Joseph — Personal Portfolio
+# Kevin Joseph Personal Portfolio
 
 Responsive static portfolio built with HTML, CSS, and vanilla JavaScript for GitHub Pages.
 
 ## Files
-- `index.html` — page structure and project content
-- `style.css` — responsive design, dark/light themes, project illustrations
-- `script.js` — theme toggle, mobile navigation, reveal effects
 
-## Featured projects
-- **FinSight India:** Hybrid retrieval (dense semantic + BM25), Reciprocal Rank Fusion, agentic cited financial research over annual reports and RBI circulars.
-- **Architect-WASM-IDE:** Browser-based developer tooling project. Check repository documentation for the current implementation and supported capabilities.
-- **Paytm AI VyaparVoice:** Merchant growth/retention copilot concept with FastAPI, SQLite RFM analytics, deterministic guardrails, multilingual briefings, and an 80/20 holdout approach for ROI attribution.
-- **AURORA:** AI-assisted enterprise IT governance and pre-implementation project risk review across legal, regulatory, privacy, AML, IT security, and governance/SDLC risk categories.
+- `index.html`: page structure, case studies, experience, education, recognition, SEO metadata, and Person structured data.
+- `style.css`: responsive design, dark and light themes, case-study layouts, focus styling, colour contrast, and reduced-motion handling.
+- `script.js`: theme toggle, mobile navigation, keyboard handling, and optional reveal effects.
+- `og-image.png`: social preview image at 1200 by 630 pixels.
+- `favicon.svg` and `favicon.png`: site icons.
+- `robots.txt` and `sitemap.xml`: crawler guidance and canonical URL listing.
+- `Kevin_Joseph_Resume_2026.pdf`: linked resume file.
+
+## Projects
+
+- SQL Studio: a Federal Bank natural-language-to-SQL proof of concept. The portfolio explicitly labels it as a proof of concept, not a production system, and excludes confidential banking details.
+- FinSight India: hybrid retrieval over Indian company annual reports and RBI circulars, using dense semantic retrieval, BM25, Reciprocal Rank Fusion, and cited responses. Evaluation limitations follow the project README roadmap.
+- Architect-WASM-IDE: a browser-native environment for Python, R, and SQL using WebAssembly.
+- Paytm AI VyaparVoice: independent hackathon entry concept. It is not an official Paytm product and is not affiliated with Paytm.
+- AURORA: enterprise IT governance and pre-implementation project risk review.
 
 ## Publish on GitHub Pages
-1. Create a public repository named `somebeing2.github.io`.
-2. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then save.
-6. Visit `https://somebeing2.github.io` after the deployment completes.
 
-## Before publishing
-- Review each project description and ensure it accurately reflects your own contribution.
-- Add a résumé PDF only if you want it publicly downloadable.
-- Do not publish confidential work materials, private datasets, API keys, or banking information.
-- Project cards link to source repositories; add screenshots or demo links only after verifying they are public and working.
+The site is intended for the public repository `somebeing2.github.io`, deployed from the root of the `main` branch. Replace the matching site files, review the diff, and push to `main`. GitHub Pages will deploy the static assets.
+
+## Disclosure
+
+The SQL Studio entry describes a proof of concept, not a production system. The projected annual time savings are labelled as a projection, not realised savings. Confidential banking details are excluded. The Paytm AI VyaparVoice entry is an independent concept and is not affiliated with Paytm.
