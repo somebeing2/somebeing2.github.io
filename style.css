@@ -196,47 +196,22 @@ body.light .case-constraint{color:#46536a}
   .recognition-results{grid-template-columns:1fr}
   .recognition-links{flex-direction:column;align-items:flex-start}
 }
-/* Recognition layout refinement */
-.recognition-closing{grid-column:1 / -1}
-.recognition-closing-content{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px 32px;align-items:center}
-.recognition-closing-copy{min-width:0}
-.recognition-links-inline{padding-top:0;justify-content:flex-end;align-items:center;gap:12px 22px}
-.recognition-links-inline a{max-width:100%;line-height:1.7}
-@media(max-width:680px){.recognition-closing{grid-column:auto}.recognition-closing-content{grid-template-columns:1fr;gap:12px}.recognition-links-inline{flex-direction:column;align-items:flex-start}}
-/* Competition record hierarchy and responsive overall-record callout */
+
+/* VyaparVoice expanded case study and responsive evidence gallery */
 .competition-heading-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 22px;margin-bottom:12px}
 .competition-heading-row h3{margin:0}
 .overall-record{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 10px;margin:0!important;padding:8px 11px;border:1px solid var(--line);border-radius:7px;background:var(--surface2);color:var(--muted);font-size:11px!important;line-height:1.55!important}
-.overall-record strong{color:var(--accent);white-space:nowrap}
-.overall-record span{color:var(--text)}
-.recognition-competition-content{min-width:0}
-.recognition-results li{break-inside:avoid}
-@media(max-width:680px){.competition-heading-row{align-items:flex-start;flex-direction:column}.overall-record{width:100%}}
-
-/* Additional experience, professional learning, and interests */
-.additional-experience { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--line); }
-.secondary-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
-.secondary-heading h3 { font-size: 19px; line-height: 1.4; letter-spacing: -.035em; margin: 7px 0 0; color: var(--text); }
-.secondary-experience-grid, .learning-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.secondary-experience-card, .learning-card { min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--card); padding: 18px; }
-.entry-kicker { display: block; font-family: "DM Mono", monospace; font-size: 8px; line-height: 1.7; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); }
-.secondary-experience-card h4, .learning-card h4 { font-size: 13px; line-height: 1.55; letter-spacing: -.02em; margin: 11px 0 6px; color: var(--text); }
-.secondary-experience-card p, .learning-card p { font-size: 11px; line-height: 1.85; color: var(--muted); margin: 7px 0 0; }
-.secondary-experience-card .entry-subtitle, .learning-card .entry-subtitle { color: var(--text); font-weight: 700; }
-.secondary-experience-card a { display: inline-block; margin-top: 12px; color: var(--accent); font-size: 10px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
-.secondary-experience-card a:focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; }
-.learning-subsection { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
-.learning-grid { margin-top: 16px; }
-.learning-card .edu-status { align-self: flex-start; }
-.interests-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
-.interests-line p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
-.additional-recognition { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; margin-top: 22px; padding: 20px 0; border-top: 1px solid var(--line); }
-.additional-recognition h3 { font-size: 14px; line-height: 1.5; margin: 0 0 7px; color: var(--text); }
-.additional-recognition p { font-size: 12px; line-height: 1.85; color: var(--muted); margin: 0; }
-@media (max-width: 900px) { .secondary-experience-grid, .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 680px) { .secondary-experience-grid, .learning-grid { grid-template-columns: 1fr; } .secondary-heading { align-items: flex-start; } .secondary-experience-card, .learning-card { padding: 17px; } }
-/* Experience timeline group headings */
-.timeline-group-label{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 0 8px;border-bottom:1px solid var(--line)}
-.timeline-group-label h3{margin:0;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.timeline-group-label .status-pill{flex-shrink:0}
-@media(max-width:680px){.timeline-group-label{padding:20px 0 8px}}
+.overall-record strong{color:var(--accent);white-space:nowrap}.overall-record span{color:var(--text)}.recognition-competition-content{min-width:0}.recognition-results li{break-inside:avoid}
+.vyaparvoice-details{margin-top:10px}.vyaparvoice-case-body{padding:0 13px 14px}.vyaparvoice-intro{padding:5px 0 14px;border-top:1px solid var(--line)}
+.vyaparvoice-intro h4,.vyaparvoice-limitations h4,.vyaparvoice-evidence h4{font-size:12px;color:var(--text);margin:12px 0 6px}.vyaparvoice-intro p,.vyaparvoice-limitations p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}
+.vyaparvoice-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+.vyaparvoice-detail-grid>div{padding:10px 0;border-top:1px solid var(--line);min-width:0}
+.vyaparvoice-detail-grid h4{font-size:11px;margin:0 0 5px;color:var(--text)}.vyaparvoice-detail-grid p{font-size:10px;line-height:1.75;color:var(--muted);margin:0}
+.vyaparvoice-evidence{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.vyaparvoice-evidence h4{grid-column:1/-1;margin:0}.vyaparvoice-evidence figure{margin:0;min-width:0}.vyaparvoice-evidence img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#0c1424;border:1px solid var(--line);border-radius:7px}
+.vyaparvoice-evidence figcaption{font-size:9px;line-height:1.6;color:var(--soft);margin-top:6px}.vyaparvoice-evidence .architecture-figure{grid-column:1/-1}.vyaparvoice-evidence .architecture-figure img{aspect-ratio:1680/1160;object-fit:contain;padding:5px}
+.vyaparvoice-limitations{margin-top:14px;padding:11px 12px;border:1px solid var(--line);border-radius:7px;background:var(--surface2)}
+.vyaparvoice-limitations h4{margin:0 0 6px}.vyaparvoice-limitations p{font-size:10px}
+.project-vyaparvoice .project-content>p{min-height:0}.project-vyaparvoice .project-disclaimer{font-size:10px;color:var(--soft);line-height:1.65;margin-top:0}
+.project-vyaparvoice .project-proof{margin-top:10px}
+@media(max-width:680px){.competition-heading-row{align-items:flex-start;flex-direction:column}.overall-record{width:100%}.vyaparvoice-detail-grid,.vyaparvoice-evidence{grid-template-columns:1fr}.vyaparvoice-evidence .architecture-figure{grid-column:auto}.vyaparvoice-case-body{padding-left:10px;padding-right:10px}}

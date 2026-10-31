@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261027e">
+  <link rel="stylesheet" href="style.css?v=20261031a">
   <meta property="og:title" content="Kevin Joseph | Business, Data and Technology">
   <meta property="og:description" content="Portfolio of Kevin Joseph, focused on Data Science, Business Analytics, Applied AI, and practical data products.">
   <meta property="og:url" content="https://somebeing2.github.io/">
@@ -44,7 +44,7 @@
   }
   </script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="2df13d9d-c653-4270-991f-da9254936a3a"></script>
-</head>
+  </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="site-shell">
@@ -154,16 +154,38 @@
             </div>
           </article>
 
-          <article class="project-card" id="paytm-project">
-            <div class="project-topline"><span class="project-index">03 / MERCHANT AI</span><span class="project-arrow" aria-hidden="true">&#8599;</span></div>
-            <div class="project-graphic graphic-paytm" aria-hidden="true"><div class="voice-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="voice-chip">VOICE TO ACTIONABLE INSIGHT</div><div class="voice-orb">V</div></div>
+          <article class="project-card project-vyaparvoice" id="paytm-project">
+            <div class="project-topline"><span class="project-index">03 / MERCHANT GROWTH AI</span><span class="project-arrow" aria-hidden="true">&#8599;</span></div>
+            <div class="project-graphic graphic-paytm" aria-hidden="true"><div class="voice-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="voice-chip">DETECT · PROPOSE · CAP · MEASURE</div><div class="voice-orb">V</div></div>
             <div class="project-content">
-              <div class="tag-row"><span>FastAPI</span><span>SQLite</span><span>RFM analytics</span><span>Voice AI</span></div>
-              <h3>Paytm AI VyaparVoice</h3>
-              <p>A merchant growth and retention copilot concept combining RFM analytics, deterministic guardrails, and multilingual Soundbox briefings in Kannada, Hindi, and English.</p>
-              <div class="project-proof"><strong>Measurement built in</strong><span>The README describes an 80/20 causal holdout approach for ROI attribution.</span></div>
-              <p class="project-disclaimer">Built as an entry for an ongoing Paytm hackathon. Independent concept, not an official Paytm product and not affiliated with Paytm.</p>
-              <div class="project-links"><a href="https://github.com/somebeing2/paytmai-vyaparvoice" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">&#8599;</span></a><a href="https://paytmai-vyaparvoice.onrender.com" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">&#8599;</span></a></div>
+              <div class="tag-row"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>SQL RFM</span><span>Sarvam</span><span>Groq</span></div>
+              <h3>VyaparVoice</h3>
+              <p>A multilingual merchant-retention copilot that turns transaction history into customer win-back campaigns. It combines SQL-based RFM segmentation, deterministic offer and cashback controls, an 80/20 treatment-control design, and voice-led explanations in Kannada, Hindi, and English.</p>
+              <div class="project-proof"><strong>Hackathon finalist</strong><span>Paytm Build for India AI Hackathon 2026 · Track 1: Merchant Growth AI · One of 130 finalists.</span></div>
+              <p class="project-disclaimer">Independent solo project developed for the hackathon. It is not an official Paytm product, integration, or endorsement.</p>
+              <details class="project-details vyaparvoice-details">
+                <summary>Explore the system, evaluation and evidence</summary>
+                <div class="vyaparvoice-case-body">
+                  <div class="vyaparvoice-intro"><h4>From transaction data to a measured retention workflow</h4><p>The product workflow is <strong>Detect → Propose → Cap → Measure</strong>. It identifies lapsed regulars, recommends a bounded win-back offer, protects the merchant's campaign budget, and measures outcomes against a holdout group. The language interface explains decisions; it does not calculate financial outcomes or execute campaign accounting.</p></div>
+                  <div class="vyaparvoice-detail-grid">
+                    <div><h4>Customer intelligence</h4><p>SQL RFM analysis and eligibility filters identify customers who were previously regular but have become inactive. The workflow is designed for merchant decision support rather than automated mass messaging.</p></div>
+                    <div><h4>Offer and financial controls</h4><p>The effective discount ratio is capped at 22% (offer amount ÷ minimum qualifying bill). Configurable campaign spend caps range from ₹50 to ₹2,500; the default campaign cap is ₹300, with a default offer of ₹25 off a ₹150 minimum bill.</p></div>
+                    <div><h4>Transactional integrity</h4><p>SQLite <code>BEGIN IMMEDIATE</code> transactions enforce cashback limits under concurrent redemption attempts. The Intent-to-Treat denominator is retained when the cap binds, preserving the treatment-control comparison.</p></div>
+                    <div><h4>Multilingual AI architecture</h4><p>Live integrations are implemented for Sarvam and Groq speech and language services. Public anonymous sessions use pre-generated Sarvam audio, browser speech and deterministic templates; a PIN-unlocked session can use live provider APIs.</p></div>
+                    <div><h4>Experiment design</h4><p>An 80/20 treatment-control holdout supports Intent-to-Treat measurement. In the synthetic 48-hour scenario, 12 of 32 treatment customers and 1 of 8 control customers returned; Fisher's exact test gives p = 0.2364, so the difference is not statistically significant. The Bayesian estimate gives an 88.8% posterior probability that the treatment return rate exceeds control. A separate binomial model estimates a 42.2% chance that the cashback cap binds under its stated assumptions. The analytics layer also includes Wilson intervals and a multi-shop statistical power simulator.</p></div>
+                    <div><h4>Deterministic evaluation</h4><p>All 60 cases passed across multilingual intent and readback, prompt-injection and policy guardrails, numeric grounding, and outbound PII blocking. This is a deterministic software benchmark, not live speech-recognition or raw LLM accuracy.</p></div>
+                    <div><h4>Privacy and auditability</h4><p>Raw payer references are not persisted in cleartext or supplied to external LLM prompts; only aggregate store facts are passed to language models. Identifier hashes are pseudonymous, not irreversible anonymization. The application also maintains a SHA-256 audit chain. The prototype has no live customer consent-capture flow; a CSV without a consent field currently defaults imported records to opted-in, which must be changed before real deployment.</p></div>
+                    <div><h4>Implementation ownership</h4><p>Solo project. I conceived and directed the product, architecture, policy specifications, evaluation criteria, deployment and validation. Implementation was developed iteratively with Arena.ai Agent Mode; Claude was used for product critique, architectural review and prompt development.</p></div>
+                  </div>
+                  <div class="vyaparvoice-evidence"><h4>Interface and decision evidence</h4>
+                    <figure><img src="assets/vyaparvoice-merchant-dashboard-kn.webp" alt="VyaparVoice merchant dashboard with Kannada voice briefing, campaign budget and customer segments" loading="lazy"><figcaption>Merchant dashboard with Kannada briefing and campaign overview.</figcaption></figure>
+                    <figure><img src="assets/vyaparvoice-recommendation-panel.webp" alt="VyaparVoice campaign recommendation panel showing eligibility, budget and cashback safeguards" loading="lazy"><figcaption>Recommendation rationale, eligibility funnel and campaign controls.</figcaption></figure>
+                    <figure class="architecture-figure"><img src="assets/vyaparvoice-architecture.svg" alt="VyaparVoice architecture diagram separating merchant experience, FastAPI orchestration, deterministic decision engine, AI language services, SQLite and integrity controls" loading="lazy"><figcaption>Layered system architecture. Financial logic and campaign state remain deterministic.</figcaption></figure>
+                  </div>
+                  <div class="vyaparvoice-limitations"><h4>Scope, assumptions and limitations</h4><p>The default merchant, 240 customer profiles and 1,613 transactions are synthetic. No real merchant pilot, customer messaging campaign or field usability test has been conducted. Campaign outcomes are simulated, not observed retention. The simulated economics estimate ₹1,740 in net incremental gross sales, ₹222 pre-fee profit and ₹91.50 post-fee profit. The 5.8x figure is incremental gross sales per rupee of cashback, not profit ROI. The ₹91.50 result assumes a 30% store gross margin and a 5% promotional fee; neither is an observed commercial term. The hackathon submission was v1.5.0; v1.6–v1.8 are subsequent engineering upgrades in the source repository.</p></div>
+                </div>
+              </details>
+              <div class="project-links"><a href="https://github.com/somebeing2/paytmai-vyaparvoice" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">&#8599;</span></a><a href="https://paytmai-vyaparvoice.onrender.com" target="_blank" rel="noopener noreferrer">Hackathon demo (v1.5) <span aria-hidden="true">&#8599;</span></a></div>
             </div>
           </article>
 
@@ -190,7 +212,6 @@
           <p>Applied research, data work, and programme leadership across banking, community initiatives, and research training.</p>
         </div>
         <div class="timeline">
-          <div class="timeline-group-label"><h3>Current roles and assignments</h3><span class="status-pill">ONGOING</span></div>
           <article class="timeline-item">
             <div class="timeline-date">OCT - DEC 2026</div><div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-body">
@@ -199,13 +220,11 @@
             </div>
           </article>
           <article class="timeline-item">
-            <div class="timeline-date">FEB 2026 - PRESENT</div><div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">21 SEP - 16 OCT 2026</div><div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-body">
-              <div class="timeline-title"><h3>Program Director</h3><span class="timeline-type">LEADERSHIP</span><span class="status-pill">ONGOING</span></div>
-              <p class="timeline-company">Changemakers</p>
-              <p class="timeline-subline">Co-Founder and Strategy Lead since February 2026; Program Director since September 2026.</p>
-              <p class="muted">Leads strategy, content operations, opportunity curation, and workshops for a student opportunity-access initiative.</p>
-              <div class="teaching-block"><h4>Teaching</h4><p>Delivered two Excel and data analysis workshops and SQL workshops for learners in Myanmar. Sessions are recorded and published on the Changemakers YouTube channel.</p><a href="https://www.youtube.com/@changemakers.uttranka" target="_blank" rel="noopener noreferrer">Changemakers YouTube channel <span aria-hidden="true">&#8599;</span></a></div>
+              <div class="timeline-title"><h3>Data Science Intern, IDEAS-TIH, ISI Kolkata</h3><span class="timeline-type">COMPLETED</span></div>
+              <p>Completed the four-week Autumn Internship Programme on Data Science at IDEAS, the Institute of Data Engineering, Analytics and Science Foundation, at the Technology Innovation Hub of the Indian Statistical Institute, Kolkata.</p>
+              <p class="muted"><strong>Project:</strong> Industrial Product Demand Forecasting.</p>
             </div>
           </article>
           <article class="timeline-item">
@@ -218,13 +237,14 @@
               <p class="muted">Provides strategic counsel to foundation leadership on organisational direction, partnership evaluation, and funding opportunities.</p>
             </div>
           </article>
-          <div class="timeline-group-label"><h3>Previous experience</h3></div>
           <article class="timeline-item">
-            <div class="timeline-date">21 SEP - 16 OCT 2026</div><div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-date">FEB 2026 - PRESENT</div><div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-body">
-              <div class="timeline-title"><h3>Data Science Intern, IDEAS-TIH, ISI Kolkata</h3><span class="timeline-type">COMPLETED</span></div>
-              <p>Completed the four-week Autumn Internship Programme on Data Science at IDEAS, the Institute of Data Engineering, Analytics and Science Foundation, at the Technology Innovation Hub of the Indian Statistical Institute, Kolkata.</p>
-              <p class="muted"><strong>Project:</strong> Industrial Product Demand Forecasting.</p>
+              <div class="timeline-title"><h3>Program Director</h3><span class="timeline-type">LEADERSHIP</span><span class="status-pill">ONGOING</span></div>
+              <p class="timeline-company">Changemakers</p>
+              <p class="timeline-subline">Co-Founder and Strategy Lead since February 2026; Program Director since September 2026.</p>
+              <p class="muted">Leads strategy, content operations, opportunity curation, and workshops for a student opportunity-access initiative.</p>
+              <div class="teaching-block"><h4>Teaching</h4><p>Delivered two Excel and data analysis workshops and SQL workshops for learners in Myanmar. Sessions are recorded and published on the Changemakers YouTube channel.</p><a href="https://www.youtube.com/@changemakers.uttranka" target="_blank" rel="noopener noreferrer">Changemakers YouTube channel <span aria-hidden="true">&#8599;</span></a></div>
             </div>
           </article>
           <article class="timeline-item">
@@ -248,29 +268,11 @@
 
 
         <div class="additional-experience" id="additional-experience-initiatives" aria-labelledby="additional-experience-title">
-          <div class="secondary-heading">
-            <div><span class="meta-label">ADDITIONAL EXPERIENCE AND INITIATIVES</span><h3 id="additional-experience-title">Other work and community contributions</h3></div>
-          </div>
+          <div class="secondary-heading"><div><span class="meta-label">ADDITIONAL EXPERIENCE AND INITIATIVES</span><h3 id="additional-experience-title">Other work and community contributions</h3></div></div>
           <div class="secondary-experience-grid">
-            <article class="secondary-experience-card">
-              <span class="entry-kicker">INDEPENDENT INITIATIVE | JUL 2024 TO APR 2026</span>
-              <h4>Some Resources</h4>
-              <p class="entry-subtitle">Educational Resource Initiative</p>
-              <p>Curated and shared global educational resources, grants, competition opportunities, and career information via Substack, supporting students from Tier 2 and Tier 3 cities and first-generation college backgrounds. This initiative informed the founding strategy for Changemakers.</p>
-              <a href="https://josephkevin.substack.com/" target="_blank" rel="noopener noreferrer">Read Some Resources on Substack</a>
-            </article>
-            <article class="secondary-experience-card">
-              <span class="entry-kicker">COLLEGE LEADERSHIP</span>
-              <h4>Placement Committee Core Team Member</h4>
-              <p class="entry-subtitle">St Joseph's College of Commerce, Bengaluru</p>
-              <p>Supported campus recruitment drives and built working relationships with corporate recruiters, including Goldman Sachs, Stripe, RSM (USA), and Target.</p>
-            </article>
-            <article class="secondary-experience-card">
-              <span class="entry-kicker">MAY TO JUNE 2023</span>
-              <h4>Social Work Intern</h4>
-              <p class="entry-subtitle">Little Sisters of the Poor, Bengaluru</p>
-              <p>Completed a social work internship and was one of the two best-performing interns in a cohort of 15.</p>
-            </article>
+            <article class="secondary-experience-card"><span class="entry-kicker">INDEPENDENT INITIATIVE | JUL 2024 TO APR 2026</span><h4>Some Resources</h4><p class="entry-subtitle">Educational Resource Initiative</p><p>Curated and shared global educational resources, grants, competition opportunities, and career information via Substack, supporting students from Tier 2 and Tier 3 cities and first-generation college backgrounds. This initiative informed the founding strategy for Changemakers.</p><a href="https://josephkevin.substack.com/" target="_blank" rel="noopener noreferrer">Read Some Resources on Substack</a></article>
+            <article class="secondary-experience-card"><span class="entry-kicker">COLLEGE LEADERSHIP</span><h4>Placement Committee Core Team Member</h4><p class="entry-subtitle">St Joseph's College of Commerce, Bengaluru</p><p>Supported campus recruitment drives and built working relationships with corporate recruiters, including Goldman Sachs, Stripe, RSM (USA), and Target.</p></article>
+            <article class="secondary-experience-card"><span class="entry-kicker">MAY TO JUNE 2023</span><h4>Social Work Intern</h4><p class="entry-subtitle">Little Sisters of the Poor, Bengaluru</p><p>Completed a social work internship and was one of the two best-performing interns in a cohort of 15.</p></article>
           </div>
         </div>
 </section>
@@ -287,40 +289,13 @@
 
 
         <div class="learning-subsection" id="professional-learning" aria-labelledby="professional-learning-title">
-          <div class="secondary-heading">
-            <div><span class="meta-label">CERTIFICATIONS AND PROFESSIONAL LEARNING</span><h3 id="professional-learning-title">Professional learning</h3></div>
-          </div>
+          <div class="secondary-heading"><div><span class="meta-label">CERTIFICATIONS AND PROFESSIONAL LEARNING</span><h3 id="professional-learning-title">Professional learning</h3></div></div>
           <div class="learning-grid">
-            <article class="learning-card">
-              <span class="edu-status">SELECTED | INCOMING</span>
-              <h4>FinTech Certificate Programme for Young Professionals</h4>
-              <p class="entry-subtitle">Indian Institute of Management Bangalore</p>
-              <p>Batch 2. Scheduled to commence in November 2026. Six-month programme divided into Part A (3 months) and Part B (3 months).</p>
-            </article>
-            <article class="learning-card">
-              <span class="edu-status">COMPLETED</span>
-              <h4>Bloomberg Financial Certifications</h4>
-              <p class="entry-subtitle">Bloomberg | July 2025</p>
-              <p>Bloomberg Market Concepts, Finance Fundamentals, Spreadsheet Analysis, and Environmental, Social and Governance (ESG).</p>
-            </article>
-            <article class="learning-card">
-              <span class="edu-status">COMPLETED</span>
-              <h4>Code in Place</h4>
-              <p class="entry-subtitle">Stanford University</p>
-              <p>Completed Stanford's Code in Place programming course.</p>
-            </article>
-            <article class="learning-card">
-              <span class="edu-status">IN PROGRESS</span>
-              <h4>Probability for AI</h4>
-              <p class="entry-subtitle">Stanford University</p>
-              <p>Currently studying probability concepts for artificial intelligence.</p>
-            </article>
-            <article class="learning-card">
-              <span class="edu-status">VALID THROUGH JUNE 2028</span>
-              <h4>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h4>
-              <p class="entry-subtitle">Oracle | Issued June 2026</p>
-              <p>This credential is time-bound and valid through June 2028.</p>
-            </article>
+            <article class="learning-card"><span class="edu-status">SELECTED | INCOMING</span><h4>FinTech Certificate Programme for Young Professionals</h4><p class="entry-subtitle">Indian Institute of Management Bangalore</p><p>Batch 2. Scheduled to commence in November 2026. Six-month programme divided into Part A (3 months) and Part B (3 months).</p></article>
+            <article class="learning-card"><span class="edu-status">COMPLETED</span><h4>Bloomberg Financial Certifications</h4><p class="entry-subtitle">Bloomberg | July 2025</p><p>Bloomberg Market Concepts, Finance Fundamentals, Spreadsheet Analysis, and Environmental, Social and Governance (ESG).</p></article>
+            <article class="learning-card"><span class="edu-status">COMPLETED</span><h4>Code in Place</h4><p class="entry-subtitle">Stanford University</p><p>Completed Stanford's Code in Place programming course.</p></article>
+            <article class="learning-card"><span class="edu-status">IN PROGRESS</span><h4>Probability for AI</h4><p class="entry-subtitle">Stanford University</p><p>Currently studying probability concepts for artificial intelligence.</p></article>
+            <article class="learning-card"><span class="edu-status">VALID THROUGH JUNE 2028</span><h4>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h4><p class="entry-subtitle">Oracle | Issued June 2026</p><p>This credential is time-bound and valid through June 2028.</p></article>
           </div>
         </div>
 </section>
@@ -342,10 +317,7 @@
         </div>
 
 
-          <div class="interests-line" id="outside-work">
-            <span class="meta-label">OUTSIDE WORK</span>
-            <p>Reading, walking, and following the stock market.</p>
-          </div>
+          <div class="interests-line" id="outside-work"><span class="meta-label">OUTSIDE WORK</span><p>Reading, walking, and following the stock market.</p></div>
 </section>
 
       <section class="section recognition-section" id="recognition" aria-labelledby="recognition-title">
@@ -356,15 +328,17 @@
         <div class="recognition-grid">
           <article class="recognition-card"><span class="recognition-number">01</span><div><h3>Unstop Global Ranking</h3><p>Global Rank 10 among 3.5M+ users, Management Category Rank 4, and CHRIST University Rank 1, as of October 2026.</p></div></article>
           <article class="recognition-card"><span class="recognition-number">02</span><div><h3>Top 100 Unstoppable B-School Leaders 2026</h3><p>Named among the Top 100 Unstoppable B-School Leaders 2026, selected from 137,000+ nominations.</p></div></article>
-          <article class="recognition-card recognition-wide"><span class="recognition-number">03</span><div class="recognition-competition-content"><div class="competition-heading-row"><h3>Competition record</h3><p class="overall-record"><strong>Overall record</strong><span>21+ top-3 finishes across competitions</span></p></div><ul class="recognition-results"><li><strong>Top 50 Global finalist:</strong> Nothing Essentials Playground (2,000 participants across four rounds).</li><li><strong>1st place:</strong> Strategy SIP Off (1,447 participants).</li><li><strong>1st place:</strong> BoardRoom: The General Management Quiz, IIM Calcutta (1,011 participants).</li><li><strong>1st place:</strong> MindMatrix, XLRI (957 participants).</li><li><strong>2nd place:</strong> Entrequest, Delhi School of Economics (385 participants).</li><li><strong>2nd place:</strong> Curiosity Curve, IIM Rohtak (371 participants).</li><li><strong>3rd place:</strong> Macro Minds, IIM Calcutta (574 participants).</li><li><strong>3rd place:</strong> Policy Innovators Challenge, IIM Udaipur (323 participants).</li><li><strong>2nd place:</strong> Vigil Fraudathon, SPJIMR and HDFC Bank (71 participants across three rounds).</li><li><strong>3rd place:</strong> Techno Trail, IIM Udaipur (479 participants).</li></ul></div></article>
-                    <article class="recognition-card recognition-closing"><span class="recognition-number">04</span><div class="recognition-closing-content"><div class="recognition-closing-copy"><h3>Beyond GDP Youth Network</h3><p>One of 350+ young leaders in a global youth network focused on rethinking measures of progress.</p></div><div class="recognition-links recognition-links-inline"><a href="https://unstop.com/u/kevinjos5033" target="_blank" rel="noopener noreferrer">View Unstop profile <span aria-hidden="true">&#8599;</span></a><a href="https://unstop.com/awards/u/kevin-joseph-4446196/2026" target="_blank" rel="noopener noreferrer">View Unstop awards profile <span aria-hidden="true">&#8599;</span></a></div></div></article>
+          <article class="recognition-card"><span class="recognition-number">03</span><div><h3>Paytm Build for India AI Hackathon 2026</h3><p><strong>Finalist, one of 130 finalists.</strong> Track 1: Merchant Growth AI. Solo entry: VyaparVoice.</p></div></article>
+          <article class="recognition-card recognition-wide"><span class="recognition-number">04</span><div class="recognition-competition-content"><div class="competition-heading-row"><h3>Competition record</h3><p class="overall-record"><strong>Overall record</strong><span>21+ top-3 finishes across competitions</span></p></div><ul class="recognition-results"><li><strong>Top 50 Global finalist:</strong> Nothing Essentials Playground, among approximately 2,000 participants across four rounds.</li><li><strong>1st place:</strong> Strategy SIP Off, 1,447 participants.</li><li><strong>1st place:</strong> BoardRoom: The General Management Quiz, IIM Calcutta, 1,011 participants.</li><li><strong>1st place:</strong> MindMatrix, XLRI, 957 participants.</li><li><strong>2nd place:</strong> Entrequest, Delhi School of Economics, 385 participants.</li><li><strong>2nd place:</strong> Curiosity Curve, IIM Rohtak, 371 participants.</li><li><strong>3rd place:</strong> Macro Minds, IIM Calcutta, 574 participants.</li><li><strong>3rd place:</strong> Policy Innovators Challenge, IIM Udaipur, 323 participants.</li><li><strong>2nd place:</strong> Vigil Fraudathon, SPJIMR and HDFC Bank, 71 participants, three-round competition.</li><li><strong>3rd place:</strong> Techno Trail, IIM Udaipur, 479 participants.</li></ul></div></article>
+          <article class="recognition-card"><span class="recognition-number">05</span><div><h3>Beyond GDP Youth Network</h3><p>One of 350+ young leaders in a global youth network focused on rethinking measures of progress.</p></div></article>
+        </div>
+        <div class="recognition-links">
+          <a href="https://unstop.com/u/kevinjos5033" target="_blank" rel="noopener noreferrer">View Unstop profile <span aria-hidden="true">&#8599;</span></a>
+          <a href="https://unstop.com/awards/u/kevin-joseph-4446196/2026" target="_blank" rel="noopener noreferrer">View Unstop awards profile <span aria-hidden="true">&#8599;</span></a>
         </div>
 
 
-        <div class="additional-recognition" id="additional-recognition" aria-label="Additional recognition">
-          <span class="recognition-number">05</span>
-          <div><h3>Service and Helpfulness Award</h3><p>St Joseph's College of Commerce | April 2025. Recognised for service and helpfulness. Physical award received.</p></div>
-        </div>
+        <div class="additional-recognition" id="additional-recognition" aria-label="Additional recognition"><span class="recognition-number">06</span><div><h3>Service and Helpfulness Award</h3><p>St Joseph's College of Commerce | April 2025. Recognised for service and helpfulness. Physical award received.</p></div></div>
 </section>
 
       <section class="contact-section section" id="contact" aria-labelledby="contact-title">
@@ -376,6 +350,6 @@
     </main>
     <footer class="footer"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">KJ</span><span>Kevin Joseph</span></a><span>Business analytics, data science, and applied AI.</span><a href="#home">Back to top <span aria-hidden="true">&#8593;</span></a></footer>
   </div>
-  <script src="script.js?v=20261027d" defer></script>
+  <script src="script.js?v=20261031a" defer></script>
 </body>
 </html>

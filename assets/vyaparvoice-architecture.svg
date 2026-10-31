@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1160" viewBox="0 0 1680 1160" role="img" aria-labelledby="title desc">
+<title id="title">VyaparVoice system architecture</title>
+<desc id="desc">Layered architecture showing merchant interface, FastAPI session orchestration, deterministic decision and measurement engine, isolated AI language services, and SQLite integrity controls.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111d32"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7fe0cb"/><stop offset="1" stop-color="#8eb7ff"/></linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7fe0cb"/></marker>
+  <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#8eb7ff"/></marker>
+  <style>
+    .h1{font:700 38px Manrope,Arial,sans-serif;fill:#f2f6ff;letter-spacing:-1.5px}
+    .sub{font:13px 'DM Mono',Consolas,monospace;fill:#94a7c3;letter-spacing:2px}
+    .layer{font:700 13px 'DM Mono',Consolas,monospace;fill:#7fe0cb;letter-spacing:1.5px}
+    .card{fill:#111d32;stroke:#31435e;stroke-width:1.5}
+    .card2{fill:#13223a;stroke:#456181;stroke-width:1.5}
+    .cardAI{fill:#111c33;stroke:#5475aa;stroke-width:1.5;stroke-dasharray:7 5}
+    .title{font:700 18px Manrope,Arial,sans-serif;fill:#f2f6ff}
+    .body{font:13px Manrope,Arial,sans-serif;fill:#b6c3d7}
+    .small{font:11px 'DM Mono',Consolas,monospace;fill:#8fa2bd}
+    .tag{font:700 10px 'DM Mono',Consolas,monospace;fill:#0b1424;letter-spacing:.6px}
+    .line{fill:none;stroke:#7fe0cb;stroke-width:2.5;marker-end:url(#arrow)}
+    .lineBlue{fill:none;stroke:#8eb7ff;stroke-width:2.2;marker-end:url(#arrowBlue)}
+    .dashed{fill:none;stroke:#8eb7ff;stroke-width:2;stroke-dasharray:7 7;marker-end:url(#arrowBlue)}
+  </style>
+</defs>
+<rect width="1680" height="1160" rx="26" fill="url(#bg)"/>
+<text x="72" y="75" class="sub">MERCHANT GROWTH AI · SYSTEM DESIGN</text>
+<text x="72" y="128" class="h1">VyaparVoice architecture</text>
+<text x="72" y="160" class="body">A deterministic merchant decision engine with a multilingual AI interface.</text>
+<rect x="1300" y="62" width="310" height="42" rx="21" fill="#142a35" stroke="#376c6a"/>
+<text x="1455" y="88" text-anchor="middle" class="small" fill="#7fe0cb">INDEPENDENT HACKATHON PROTOTYPE</text>
+
+<!-- Layer 1 -->
+<text x="72" y="218" class="layer">01 / MERCHANT EXPERIENCE</text>
+<rect x="72" y="238" width="1536" height="124" rx="16" class="card"/>
+<g>
+ <rect x="94" y="262" width="350" height="76" rx="10" class="card2"/>
+ <text x="116" y="292" class="title">Merchant dashboard</text><text x="116" y="317" class="body">Campaigns · customer cohorts · budget status</text>
+ <rect x="464" y="262" width="350" height="76" rx="10" class="card2"/>
+ <text x="486" y="292" class="title">Multilingual voice</text><text x="486" y="317" class="body">Kannada · Hindi · English</text>
+ <rect x="834" y="262" width="350" height="76" rx="10" class="card2"/>
+ <text x="856" y="292" class="title">Counter workflow</text><text x="856" y="317" class="body">QR pass · bill scan · redemption</text>
+ <rect x="1204" y="262" width="382" height="76" rx="10" class="card2"/>
+ <text x="1226" y="292" class="title">Ledger ingestion</text><text x="1226" y="317" class="body">Merchant CSV upload · validation</text>
+</g>
+<path d="M840 362 V408" class="line"/>
+
+<!-- Layer 2 -->
+<text x="72" y="438" class="layer">02 / APPLICATION AND SESSION ORCHESTRATION</text>
+<rect x="72" y="458" width="1536" height="110" rx="16" class="card"/>
+<rect x="94" y="482" width="1492" height="62" rx="10" fill="#162941" stroke="#41647a"/>
+<text x="120" y="508" class="title">FastAPI application</text>
+<text x="120" y="531" class="body">Request validation · visitor-isolated sessions · 30-minute session TTL · workflow orchestration</text>
+<path d="M840 568 V611" class="line"/>
+
+<!-- Layer 3: decision engine -->
+<text x="72" y="642" class="layer">03 / DETERMINISTIC DECISION AND MEASUREMENT ENGINE</text>
+<rect x="72" y="662" width="1036" height="236" rx="16" class="card"/>
+<rect x="96" y="692" width="300" height="176" rx="12" class="card2"/>
+<text x="118" y="728" class="title">Customer intelligence</text>
+<text x="118" y="758" class="body">SQL RFM segmentation</text><text x="118" y="784" class="body">Lapsed regular identification</text><text x="118" y="810" class="body">Eligibility and cohort filters</text>
+<rect x="416" y="692" width="300" height="176" rx="12" class="card2"/>
+<text x="438" y="728" class="title">Offer and policy engine</text>
+<text x="438" y="758" class="body">Offer validation and bill checks</text><text x="438" y="784" class="body">&lt;=22% effective discount ceiling</text><text x="438" y="810" class="body">INR 50-2,500 campaign cap range</text><text x="438" y="840" class="small">Default: INR 25 off INR 150 · INR 300 cap</text>
+<rect x="736" y="692" width="348" height="176" rx="12" class="card2"/>
+<text x="758" y="728" class="title">Experiment and analytics</text>
+<text x="758" y="758" class="body">80/20 treatment-control holdout</text><text x="758" y="784" class="body">Intent-to-Treat measurement</text><text x="758" y="810" class="body">Fisher · Wilson · Bayesian estimates</text><text x="758" y="840" class="small">Synthetic campaign outcomes</text>
+
+<!-- AI sidecar -->
+<text x="1148" y="642" class="layer" fill="#8eb7ff">AI LANGUAGE SERVICES / SIDECAR</text>
+<rect x="1148" y="662" width="460" height="236" rx="16" class="cardAI"/>
+<text x="1176" y="682" class="small">AGGREGATE-ONLY CONTEXT INPUT</text>
+<text x="1176" y="714" class="title">Provider routing</text>
+<text x="1176" y="738" class="body">Sarvam · speech and conversation APIs</text>
+<text x="1176" y="766" class="body">Groq · language and speech APIs</text>
+<text x="1176" y="794" class="body">Browser Web Speech + deterministic fallback</text>
+<path d="M1108 765 H1148" class="dashed"/>
+<text x="1176" y="842" class="small">Language assistance only; no money movement</text>
+<path d="M1378 662 V612 H1010" class="dashed"/>
+<text x="1214" y="598" class="small">Grounded text / voice response</text>
+
+<!-- Layer 4 -->
+<path d="M590 898 V932" class="line"/>
+<text x="72" y="964" class="layer">04 / DATA, TRANSACTIONAL INTEGRITY AND AUDIT</text>
+<rect x="72" y="984" width="1536" height="112" rx="16" class="card"/>
+<rect x="94" y="1006" width="440" height="68" rx="10" class="card2"/>
+<text x="116" y="1034" class="title">Session-scoped SQLite</text><text x="116" y="1056" class="body">Customers · ledger · campaigns · event records</text>
+<rect x="552" y="1006" width="500" height="68" rx="10" class="card2"/>
+<text x="574" y="1034" class="title">Atomic campaign controls</text><text x="574" y="1056" class="body">BEGIN IMMEDIATE · concurrent-safe cashback cap</text>
+<rect x="1070" y="1006" width="516" height="68" rx="10" class="card2"/>
+<text x="1092" y="1034" class="title">Privacy and audit</text><text x="1092" y="1056" class="body">Pseudonymized payer refs · SHA-256 audit chain</text>
+<text x="72" y="1130" class="small">CONTROL PRINCIPLE: eligibility, financial calculations, campaign state and redemption remain deterministic; AI supports voice and explanation.</text>
+</svg>
